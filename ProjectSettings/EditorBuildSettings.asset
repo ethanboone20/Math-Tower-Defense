@@ -4,5 +4,12 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 2674e7b91e91395409e66ab32bcfadc0
+  - enabled: 1
+    path: Assets/Scenes/Grassy Plains.unity
+    guid: 84cdde33a79b7114d8684749a1614e1a
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0
