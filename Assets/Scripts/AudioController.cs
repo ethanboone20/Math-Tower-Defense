@@ -54,7 +54,7 @@ public class AudioController : MonoBehaviour
         {
             audioSource.clip = gameSceneAudioClips[0];
             audioSource.loop = false; // do not loop individual clips since the array will be manually looped through 
-            PlayMusic();
+            StartGameSceneLoop();
         }
         else
         {
