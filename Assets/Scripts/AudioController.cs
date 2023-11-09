@@ -35,9 +35,15 @@ public class AudioController : MonoBehaviour
     public AudioClip buttonPressSound; //sound effect to play when a button is pressed
     public AudioClip enemyDamageSound; //sound effect to play when enemy gameObject takes damage
     public AudioClip enemyDefeatSound; //sound effect to play when enemy gameObject is destroyed (1 --> 0)
-    public AudioClip placeTowerSound;
-    public AudioClip towerFireSound;
-    public AudioClip gameOverSound;
+    public AudioClip placeTowerSound; //sound effect to play when a tower is placed
+    public AudioClip towerFireSound; //sound effect to play when a tower fires at an enemy
+    public AudioClip gameOverSound; //sound effect to play when the player loses the game
+    public AudioClip winGameSound; //sound effect to play when the player completes all the waves
+    public AudioClip questionMusic; //sound effect to play when the player is asked a question (upon placing a tower)
+    public AudioClip incorrectAnswer; //sound effect to play when a player answers a question incorrectly 
+    public AudioClip correctAnswer; //sound effect to play when a player answers a question correctly 
+    public AudioClip reachedEOP; //sound effect to play when an enemy reaches the end of the path (player loses a life)
+
     private AudioSource sfxSource; //source for playing sound effects 
 
     // Start is called before the first frame update
@@ -182,5 +188,37 @@ public class AudioController : MonoBehaviour
     {
         PlaySoundEffect(gameOverSound);
     }
+
+    public void PlayCorrectAnswerSound()
+    {
+        PlaySoundEffect(correctAnswer);
+    }
+
+    public void PlayIncorrectAnswer()
+    {
+        PlaySoundEffect(incorrectAnswer);
+    }
+
+    public void PlayQuestionMusic()
+    {
+        PlaySoundEffect(questionMusic);
+    }
+
+    public void PlayReachedEOPSound()
+    {
+        PlaySoundEffect(reachedEOP);
+    }
+
+    public void PlayWinGameSound()
+    {
+        PlaySoundEffect(winGameSound);
+    }
     
+    public void PauseGameSceneAudio()
+    {
+        if (audioSource != null && audioSource.isPlaying)
+        {
+            audioSource.Pause();
+        }
+    }
 }

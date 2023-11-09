@@ -10,6 +10,17 @@ public class GameOver : MonoBehaviour
 
     void OnEnable()
     {
+
+        if (AudioController.Instance != null)
+        {
+            AudioController.Instance.PlayGameOverSound();
+            AudioController.Instance.PauseGameSceneAudio();
+        }
+        else
+        {
+            Debug.LogWarning("No AudioController Instance found.");
+        }
+
         wavesText.text = "Waves Survived: " + PlayerStats.waves.ToString();
     }
 }

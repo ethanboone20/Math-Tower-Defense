@@ -77,6 +77,15 @@ public class EnemyMovement : MonoBehaviour
 
     void EndPath()
     {
+        if (AudioController.Instance != null)
+        {
+            AudioController.Instance.PlayReachedEOPSound();
+        }
+        else
+        {
+            Debug.LogWarning("No AudioController Instance found.");
+        }
+        
         PlayerStats.lives--;
         Destroy(enemy);
     }

@@ -2669,6 +2669,11 @@ MonoBehaviour:
   placeTowerSound: {fileID: 8300000, guid: 159f1024c0531154ca6009e2d3d4bb5b, type: 3}
   towerFireSound: {fileID: 8300000, guid: 273c49a1902e57b438ce0b9bcc8cb775, type: 3}
   gameOverSound: {fileID: 8300000, guid: dc85582034b0f5d47beb0e7e341e2cf4, type: 3}
+  winGameSound: {fileID: 8300000, guid: 3b973b5f77baad449a40778c76110959, type: 3}
+  questionMusic: {fileID: 8300000, guid: 42d39a404e0d05749826be423452f326, type: 3}
+  incorrectAnswer: {fileID: 8300000, guid: 806821cc3c8cce640b05c28a2602b9ed, type: 3}
+  correctAnswer: {fileID: 8300000, guid: 3afa7ea5c94be7743ba7b152d1f3b867, type: 3}
+  reachedEOP: {fileID: 8300000, guid: aa213c9debdcd1742a3fa076860854a7, type: 3}
 --- !u!4 &638447028
 Transform:
   m_ObjectHideFlags: 0
