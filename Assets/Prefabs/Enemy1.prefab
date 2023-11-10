@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 7146335330424551965}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.9063079, z: 0.42261827, w: 0}
-  m_LocalPosition: {x: -21.566269, y: -0.3, z: -2.5425515}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -46,13 +46,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02fb4d0c3771e36469ff2bdbc9828366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 7146335330424551965}
+  enemy: {fileID: 1428579282766932407}
+  enemies:
+  - {fileID: 7146335330424551965}
+  - {fileID: 480652976303987893, guid: d350cca4de450a0468b732cb02108c4d, type: 3}
   pathCreator: {fileID: 8525617472168937324, guid: 4b8b628f4f50fcd4fa90f04d0cfd3ef8, type: 3}
+  enemyNum: 1
   speed: 5
   health: 100
   value: 50
   deathEffect: {fileID: 8574219955903047581, guid: 296cc2937ce4d3746993eee6703a2aa8, type: 3}
   distanceTravelled: 0
+  newSpawnPosition: {fileID: 0}
 --- !u!135 &6453903916540016209
 SphereCollider:
   m_ObjectHideFlags: 0

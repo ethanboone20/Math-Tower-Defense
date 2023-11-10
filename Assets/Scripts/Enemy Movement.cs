@@ -5,9 +5,11 @@ using PathCreation;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public GameObject enemy;
+    public Transform enemy;
+    public Transform[] enemies;
     public PathCreator pathCreator;
 
+    public int enemyNum;
     public float speed = 5;
     public int health = 100;
     public int value = 50;
@@ -15,6 +17,7 @@ public class EnemyMovement : MonoBehaviour
     public GameObject deathEffect;
 
     public float distanceTravelled;
+    public Transform newSpawnPosition;
 
     private float endPoint = 62f;
 
@@ -50,12 +53,32 @@ public class EnemyMovement : MonoBehaviour
             Debug.LogWarning("No AudioController Instance found!");
         }
 
-        GameObject effect = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
-        Destroy(effect, 5f);
+        if (enemyNum == 1)
+        {
+            GameObject effect1 = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Destroy(effect1, 5f);
 
-        PlayerStats.money += value;
+            PlayerStats.money += value;
 
-        Destroy(gameObject);
+            Destroy(gameObject);
+        }
+        if (enemyNum == 2)
+        {
+            GameObject effect2 = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
+
+            Destroy(effect2, 5f);
+
+            PlayerStats.money += value;
+
+            newSpawnPosition = transform;
+            Debug.Log("New Spawn Position: " + newSpawnPosition);
+
+            WaveSpawner.SpawnEnemy(enemies[0], newSpawnPosition);
+
+            Destroy(gameObject);
+
+        }
+
     }
 
     void Update()
@@ -89,4 +112,5 @@ public class EnemyMovement : MonoBehaviour
         PlayerStats.lives--;
         Destroy(enemy);
     }
+
 }

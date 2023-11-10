@@ -7,7 +7,8 @@ using TMPro;
 public class WaveSpawner : MonoBehaviour
 {
 
-    public Transform enemyPrefab;
+    public Transform enemy1Prefab;
+    public Transform enemy2Prefab;
 
     public Transform spawnPoint;
 
@@ -38,13 +39,42 @@ public class WaveSpawner : MonoBehaviour
         waveNumber++;
         PlayerStats.waves++;
 
-        for (int i = 1; i < waveNumber; i++){
-            SpawnEnemy();
-            yield return new WaitForSeconds(0.5f);
+        if (waveNumber == 2)
+        {
+            for (int i = 1; i < 6; i++)
+            {
+                SpawnEnemy(enemy1Prefab, spawnPoint);
+                yield return new WaitForSeconds(0.5f);
+            }
         }
+        if (waveNumber == 3)
+        {
+            for (int i = 1; i < 11; i++)
+            {
+                SpawnEnemy(enemy1Prefab, spawnPoint);
+                yield return new WaitForSeconds(0.5f);
+            }
+        }
+        if (waveNumber == 4)
+        {
+            for (int i = 1; i < 6; i++)
+            {
+                SpawnEnemy(enemy2Prefab, spawnPoint);
+                yield return new WaitForSeconds(0.5f);
+            }
+        }
+        if (waveNumber == 5)
+        {
+            for (int i = 1; i < 11; i++)
+            {
+                SpawnEnemy(enemy2Prefab, spawnPoint);
+                yield return new WaitForSeconds(0.5f);
+            }
+        }
+        
     }
 
-    void SpawnEnemy()
+    public static void SpawnEnemy(Transform enemyPrefab, Transform spawnPoint)
     {
         Instantiate(enemyPrefab, spawnPoint.position, enemyPrefab.rotation);
     }
