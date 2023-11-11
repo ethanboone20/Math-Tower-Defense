@@ -9,6 +9,9 @@ public class WaveSpawner : MonoBehaviour
 
     public Transform enemy1Prefab;
     public Transform enemy2Prefab;
+    public Transform enemy3Prefab;
+    public Transform enemy4Prefab;
+    public Transform enemy5Prefab;
 
     public Transform spawnPoint;
 
@@ -70,7 +73,55 @@ public class WaveSpawner : MonoBehaviour
                 SpawnEnemy(enemy2Prefab, spawnPoint.position);
                 yield return new WaitForSeconds(0.5f);
             }
-        }  
+        }
+        if (waveNumber == 6)
+        {
+            for (int i = 1; i < 6; i++)
+            {
+                SpawnEnemy(enemy3Prefab, spawnPoint.position);
+                yield return new WaitForSeconds(0.5f);
+            }
+        }
+        if (waveNumber == 7)
+        {
+            for (int i = 1; i < 11; i++)
+            {
+                SpawnEnemy(enemy3Prefab, spawnPoint.position);
+                yield return new WaitForSeconds(0.5f);
+            }
+        }
+        if (waveNumber == 8)
+        {
+            for (int i = 1; i < 6; i++)
+            {
+                SpawnEnemy(enemy4Prefab, spawnPoint.position);
+                yield return new WaitForSeconds(0.5f);
+            }
+        }
+        if (waveNumber == 9)
+        {
+            for (int i = 1; i < 11; i++)
+            {
+                SpawnEnemy(enemy4Prefab, spawnPoint.position);
+                yield return new WaitForSeconds(0.5f);
+            }
+        }
+        if (waveNumber == 10)
+        {
+            for (int i = 1; i < 6; i++)
+            {
+                SpawnEnemy(enemy5Prefab, spawnPoint.position);
+                yield return new WaitForSeconds(0.5f);
+            }
+        }
+        if (waveNumber == 11)
+        {
+            for (int i = 1; i < 11; i++)
+            {
+                SpawnEnemy(enemy5Prefab, spawnPoint.position);
+                yield return new WaitForSeconds(0.5f);
+            }
+        }
     }
 
     public static void SpawnEnemy(Transform enemyPrefab, Vector3 spawnPoint)

@@ -78,7 +78,54 @@ public class EnemyMovement : MonoBehaviour
 
             Destroy(gameObject);
         }
+        if (enemyNum == 3)
+        {
+            GameObject effect3 = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
 
+            Destroy(effect3, 5f);
+
+            PlayerStats.money += value;
+
+            //Sets the spawn position;
+            EnemyMovement newEnemy = enemies[1].GetComponent<EnemyMovement>();
+            newEnemy.distanceTravelled = distanceTravelled;
+
+            WaveSpawner.SpawnEnemy(enemies[1].transform, newSpawnPosition);
+
+            Destroy(gameObject);
+        }
+        if (enemyNum == 4)
+        {
+            GameObject effect4 = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
+
+            Destroy(effect4, 5f);
+
+            PlayerStats.money += value;
+
+            //Sets the spawn position;
+            EnemyMovement newEnemy = enemies[2].GetComponent<EnemyMovement>();
+            newEnemy.distanceTravelled = distanceTravelled;
+
+            WaveSpawner.SpawnEnemy(enemies[2].transform, newSpawnPosition);
+
+            Destroy(gameObject);
+        }
+        if (enemyNum == 5)
+        {
+            GameObject effect5 = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
+
+            Destroy(effect5, 5f);
+
+            PlayerStats.money += value;
+
+            //Sets the spawn position;
+            EnemyMovement newEnemy = enemies[3].GetComponent<EnemyMovement>();
+            newEnemy.distanceTravelled = distanceTravelled;
+
+            WaveSpawner.SpawnEnemy(enemies[3].transform, newSpawnPosition);
+
+            Destroy(gameObject);
+        }
     }
 
     void Update()
@@ -112,11 +159,4 @@ public class EnemyMovement : MonoBehaviour
         PlayerStats.lives--;
         Destroy(enemy);
     }
-
-    void ResetEnemyDistanceTravelled(int index)
-    {
-        EnemyMovement newEnemy = enemies[index].GetComponent<EnemyMovement>();
-        newEnemy.distanceTravelled = 0;
-    }
-
 }

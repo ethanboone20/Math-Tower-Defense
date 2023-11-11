@@ -116,13 +116,16 @@ MonoBehaviour:
   enemies:
   - {fileID: 7146335330424551965, guid: bfce7e07450558a4983ab2ef10a0d53f, type: 3}
   - {fileID: 480652976303987893}
+  - {fileID: 7586918630047780299, guid: 49f6b107f53345545aadb64bf36b9872, type: 3}
+  - {fileID: 7113833535049046191, guid: 9d4e7b0f2666d8f4baf7e5624e7d969a, type: 3}
+  - {fileID: 7021902291879695130, guid: 28c8cc86d4f908b4c834617e985111dc, type: 3}
   pathCreator: {fileID: 8525617472168937324, guid: 4b8b628f4f50fcd4fa90f04d0cfd3ef8, type: 3}
   enemyNum: 2
   speed: 5
   health: 100
   value: 50
   deathEffect: {fileID: 4638691832614914346, guid: fd431412f6eeb7a4781f1478877de799, type: 3}
-  distanceTravelled: 0
+  distanceTravelled: 30.209986
   newSpawnPosition: {x: 0, y: 0, z: 0}
 --- !u!135 &6718449977109098241
 SphereCollider:
