@@ -43,7 +43,7 @@ public class WaveSpawner : MonoBehaviour
         {
             for (int i = 1; i < 6; i++)
             {
-                SpawnEnemy(enemy1Prefab, spawnPoint);
+                SpawnEnemy(enemy1Prefab, spawnPoint.position);
                 yield return new WaitForSeconds(0.5f);
             }
         }
@@ -51,7 +51,7 @@ public class WaveSpawner : MonoBehaviour
         {
             for (int i = 1; i < 11; i++)
             {
-                SpawnEnemy(enemy1Prefab, spawnPoint);
+                SpawnEnemy(enemy1Prefab, spawnPoint.position);
                 yield return new WaitForSeconds(0.5f);
             }
         }
@@ -59,7 +59,7 @@ public class WaveSpawner : MonoBehaviour
         {
             for (int i = 1; i < 6; i++)
             {
-                SpawnEnemy(enemy2Prefab, spawnPoint);
+                SpawnEnemy(enemy2Prefab, spawnPoint.position);
                 yield return new WaitForSeconds(0.5f);
             }
         }
@@ -67,15 +67,14 @@ public class WaveSpawner : MonoBehaviour
         {
             for (int i = 1; i < 11; i++)
             {
-                SpawnEnemy(enemy2Prefab, spawnPoint);
+                SpawnEnemy(enemy2Prefab, spawnPoint.position);
                 yield return new WaitForSeconds(0.5f);
             }
-        }
-        
+        }  
     }
 
-    public static void SpawnEnemy(Transform enemyPrefab, Transform spawnPoint)
+    public static void SpawnEnemy(Transform enemyPrefab, Vector3 spawnPoint)
     {
-        Instantiate(enemyPrefab, spawnPoint.position, enemyPrefab.rotation);
+        Instantiate(enemyPrefab, spawnPoint, enemyPrefab.rotation);
     }
 }

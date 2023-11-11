@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02fb4d0c3771e36469ff2bdbc9828366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 1428579282766932407}
+  enemy: {fileID: 7146335330424551965}
   enemies:
   - {fileID: 7146335330424551965}
   - {fileID: 480652976303987893, guid: d350cca4de450a0468b732cb02108c4d, type: 3}
@@ -57,7 +57,7 @@ MonoBehaviour:
   value: 50
   deathEffect: {fileID: 8574219955903047581, guid: 296cc2937ce4d3746993eee6703a2aa8, type: 3}
   distanceTravelled: 0
-  newSpawnPosition: {fileID: 0}
+  newSpawnPosition: {x: 0, y: 0, z: 0}
 --- !u!135 &6453903916540016209
 SphereCollider:
   m_ObjectHideFlags: 0

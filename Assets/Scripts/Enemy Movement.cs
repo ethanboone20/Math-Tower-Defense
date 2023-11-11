@@ -5,8 +5,8 @@ using PathCreation;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public Transform enemy;
-    public Transform[] enemies;
+    public GameObject enemy;
+    public GameObject[] enemies;
     public PathCreator pathCreator;
 
     public int enemyNum;
@@ -17,7 +17,7 @@ public class EnemyMovement : MonoBehaviour
     public GameObject deathEffect;
 
     public float distanceTravelled;
-    public Transform newSpawnPosition;
+    public Vector3 newSpawnPosition;
 
     private float endPoint = 62f;
 
@@ -70,13 +70,13 @@ public class EnemyMovement : MonoBehaviour
 
             PlayerStats.money += value;
 
-            newSpawnPosition = transform;
-            Debug.Log("New Spawn Position: " + newSpawnPosition);
+            //Sets the spawn position;
+            EnemyMovement newEnemy = enemies[0].GetComponent<EnemyMovement>();
+            newEnemy.distanceTravelled = distanceTravelled;
 
-            WaveSpawner.SpawnEnemy(enemies[0], newSpawnPosition);
+            WaveSpawner.SpawnEnemy(enemies[0].transform, newSpawnPosition);
 
             Destroy(gameObject);
-
         }
 
     }
@@ -111,6 +111,12 @@ public class EnemyMovement : MonoBehaviour
         
         PlayerStats.lives--;
         Destroy(enemy);
+    }
+
+    void ResetEnemyDistanceTravelled(int index)
+    {
+        EnemyMovement newEnemy = enemies[index].GetComponent<EnemyMovement>();
+        newEnemy.distanceTravelled = 0;
     }
 
 }

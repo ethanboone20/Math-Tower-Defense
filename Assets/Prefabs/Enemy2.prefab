@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02fb4d0c3771e36469ff2bdbc9828366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 999887049255618063}
+  enemy: {fileID: 480652976303987893}
   enemies:
   - {fileID: 7146335330424551965, guid: bfce7e07450558a4983ab2ef10a0d53f, type: 3}
   - {fileID: 480652976303987893}
@@ -123,7 +123,7 @@ MonoBehaviour:
   value: 50
   deathEffect: {fileID: 4638691832614914346, guid: fd431412f6eeb7a4781f1478877de799, type: 3}
   distanceTravelled: 0
-  newSpawnPosition: {fileID: 0}
+  newSpawnPosition: {x: 0, y: 0, z: 0}
 --- !u!135 &6718449977109098241
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -145,8 +145,3 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 3.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!4 &999887049255618063 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c5935d44c18ae644396721871f7fa4b1, type: 3}
-  m_PrefabInstance: {fileID: 750683335727538660}
-  m_PrefabAsset: {fileID: 0}
