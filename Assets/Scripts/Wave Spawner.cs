@@ -22,6 +22,13 @@ public class WaveSpawner : MonoBehaviour
 
     private int waveNumber = 1;
 
+    public GameManager gameManager; 
+
+    void Start()
+    {
+        gameManager = GetComponent<GameManager>();
+    }
+
     void Update()
     {
         if (countdown <= 0f)
@@ -122,6 +129,12 @@ public class WaveSpawner : MonoBehaviour
                 yield return new WaitForSeconds(0.5f);
             }
         }
+        if (waveNumber == 12)
+        {
+            gameManager.EndGame(true);
+        }
+        
+        
     }
 
     public static void SpawnEnemy(Transform enemyPrefab, Vector3 spawnPoint)

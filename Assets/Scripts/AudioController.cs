@@ -40,6 +40,7 @@ public class AudioController : MonoBehaviour
     public AudioClip gameOverSound; //sound effect to play when the player loses the game
     public AudioClip winGameSound; //sound effect to play when the player completes all the waves
     public AudioClip questionMusic; //sound effect to play when the player is asked a question (upon placing a tower)
+    public AudioClip countDownEffect; //sound effect to play when the player is running out of time to answer a question
     public AudioClip incorrectAnswer; //sound effect to play when a player answers a question incorrectly 
     public AudioClip correctAnswer; //sound effect to play when a player answers a question correctly 
     public AudioClip reachedEOP; //sound effect to play when an enemy reaches the end of the path (player loses a life)
@@ -204,6 +205,11 @@ public class AudioController : MonoBehaviour
         PlaySoundEffect(questionMusic);
     }
 
+    public void PlayCountDownEffect()
+    {
+        PlaySoundEffect(countDownEffect);
+    }
+
     public void PlayReachedEOPSound()
     {
         PlaySoundEffect(reachedEOP);
@@ -221,4 +227,6 @@ public class AudioController : MonoBehaviour
             audioSource.Pause();
         }
     }
+
+
 }
