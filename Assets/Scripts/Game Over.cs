@@ -6,20 +6,11 @@ using TMPro;
 
 public class GameOver : MonoBehaviour
 {
-    public TextMeshProUGUI wavesText;
+    public TextMeshProUGUI wavesText; 
 
     void OnEnable()
     {
-
-        if (AudioController.Instance != null)
-        {
-            AudioController.Instance.PlayGameOverSound();
-            AudioController.Instance.PauseGameSceneAudio();
-        }
-        else
-        {
-            Debug.LogWarning("No AudioController Instance found.");
-        }
+        AudioController.Instance.PauseGameSceneAudio();
 
         wavesText.text = "Waves Survived: " + PlayerStats.waves.ToString();
     }

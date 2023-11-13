@@ -10,6 +10,7 @@ public class PlayGame : MonoBehaviour
     public void LoadLevel()
     {
         SceneManager.LoadScene("Grassy Plains");
+        Time.timeScale = 1; 
 
     }
 

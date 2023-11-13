@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
     private bool gameEnded = false;
 
     public GameObject gameOverUI;
+    public GameObject winGameUI;
+
     
     void Update()
     {
@@ -17,23 +19,41 @@ public class GameManager : MonoBehaviour
 
         if (PlayerStats.lives <= 0)
         {
-            EndGame();
+            EndGame(false);
         }
     }
 
-    void EndGame()
+    public void EndGame(bool playerWon)
     {
-        if (AudioController.Instance != null)
+        
+        gameEnded = true;
+        Time.timeScale = 0;
+
+        if (playerWon)
         {
-            AudioController.Instance.PlayGameOverSound();
+            if (AudioController.Instance != null)
+            {
+                AudioController.Instance.PlayWinGameSound();
+            }
+            else
+            {
+                Debug.LogWarning("No AudioController Instance found.");
+            }
+
+            winGameUI.SetActive(true);
         }
         else
         {
-            Debug.LogWarning("No AudioController Instance found!");
-        }
+            if (AudioController.Instance != null)
+            {
+                AudioController.Instance.PlayGameOverSound();
+            }
+            else
+            {
+                Debug.LogWarning("No AudioController Instance found.");
+            }
 
-        gameEnded = true;
-        Time.timeScale = 0;
-        gameOverUI.SetActive(true);
+            gameOverUI.SetActive(true);
+        }
     }
 }
