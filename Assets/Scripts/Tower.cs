@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
+    public static Tower instance;
+
     private Transform target;
 
     [Header("Attributes")]
@@ -11,6 +13,7 @@ public class Tower : MonoBehaviour
     public float range = 10f;
     public float fireRate = 1f;
     private float fireCountdown = 0;
+    public float slowAmount = 1f;
 
     [Header("Unity Setup Fields")]
 
@@ -18,6 +21,15 @@ public class Tower : MonoBehaviour
 
     public GameObject bulletPrefab;
     public Transform firePoint;
+    
+    void Awake()
+    {
+        if (instance != null)
+        {
+            return;
+        }
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()

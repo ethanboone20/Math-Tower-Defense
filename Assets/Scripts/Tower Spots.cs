@@ -66,7 +66,7 @@ public class TowerSpots : MonoBehaviour
 
         question.currentTowerSpot = this;
         
-        if (PlayerStats.money > buildManager.towerToBuild.cost)
+        if (PlayerStats.money >= buildManager.towerToBuild.cost)
         {
             if (question.questionType == "Addition")
             {

@@ -5,12 +5,16 @@ using PathCreation;
 
 public class EnemyMovement : MonoBehaviour
 {
+    public static EnemyMovement instance;
+
     public GameObject enemy;
     public GameObject[] enemies;
     public PathCreator pathCreator;
 
     public int enemyNum;
-    public float speed = 5;
+    public float startSpeed = 5f;
+    [HideInInspector]
+    public float speed;
     public int health = 100;
     public int value = 50;
 
@@ -21,9 +25,20 @@ public class EnemyMovement : MonoBehaviour
 
     private float endPoint = 62f;
 
+    public EnemyMovement newEnemy;
+
+    Tower tower;
+
+    void Start()
+    {
+        speed = startSpeed;
+        tower = Tower.instance;
+    }
+
     public void TakeDamage(int amount)
     {
         health -= amount;
+        Slow(tower.slowAmount);
 
         if (health <= 0)
         {
@@ -42,6 +57,11 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
+    public void Slow(float slowAmount)
+    {
+        speed = startSpeed * (1f - slowAmount);
+    }
+
     void Die()
     {
         if (AudioController.Instance != null)
@@ -56,6 +76,7 @@ public class EnemyMovement : MonoBehaviour
         if (enemyNum == 1)
         {
             GameObject effect1 = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
+
             Destroy(effect1, 5f);
 
             PlayerStats.money += value;
@@ -71,8 +92,13 @@ public class EnemyMovement : MonoBehaviour
             PlayerStats.money += value;
 
             //Sets the spawn position;
-            EnemyMovement newEnemy = enemies[0].GetComponent<EnemyMovement>();
+            newEnemy = enemies[0].GetComponent<EnemyMovement>();
             newEnemy.distanceTravelled = distanceTravelled;
+
+            if (speed < 5)
+            {
+                newEnemy.speed = speed;
+            }
 
             WaveSpawner.SpawnEnemy(enemies[0].transform, newSpawnPosition);
 
@@ -87,8 +113,13 @@ public class EnemyMovement : MonoBehaviour
             PlayerStats.money += value;
 
             //Sets the spawn position;
-            EnemyMovement newEnemy = enemies[1].GetComponent<EnemyMovement>();
+            newEnemy = enemies[1].GetComponent<EnemyMovement>();
             newEnemy.distanceTravelled = distanceTravelled;
+
+            if (speed < 5)
+            {
+                newEnemy.speed = speed;
+            }
 
             WaveSpawner.SpawnEnemy(enemies[1].transform, newSpawnPosition);
 
@@ -103,8 +134,13 @@ public class EnemyMovement : MonoBehaviour
             PlayerStats.money += value;
 
             //Sets the spawn position;
-            EnemyMovement newEnemy = enemies[2].GetComponent<EnemyMovement>();
+            newEnemy = enemies[2].GetComponent<EnemyMovement>();
             newEnemy.distanceTravelled = distanceTravelled;
+
+            if (speed < 5)
+            {
+                newEnemy.speed = speed;
+            }
 
             WaveSpawner.SpawnEnemy(enemies[2].transform, newSpawnPosition);
 
@@ -119,8 +155,13 @@ public class EnemyMovement : MonoBehaviour
             PlayerStats.money += value;
 
             //Sets the spawn position;
-            EnemyMovement newEnemy = enemies[3].GetComponent<EnemyMovement>();
+            newEnemy = enemies[3].GetComponent<EnemyMovement>();
             newEnemy.distanceTravelled = distanceTravelled;
+
+            if (speed < 5)
+            {
+                newEnemy.speed = speed;
+            }
 
             WaveSpawner.SpawnEnemy(enemies[3].transform, newSpawnPosition);
 

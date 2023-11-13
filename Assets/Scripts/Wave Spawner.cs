@@ -22,7 +22,7 @@ public class WaveSpawner : MonoBehaviour
 
     private int waveNumber = 1;
 
-    public GameManager gameManager; 
+    public GameManager gameManager;
 
     void Start()
     {
