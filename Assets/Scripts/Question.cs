@@ -29,6 +29,7 @@ public class Question : MonoBehaviour
     BuildManager buildManager;
     TowerSpots towerSpots;
 
+
     void Awake()
     {
         if (instance != null)
@@ -58,6 +59,7 @@ public class Question : MonoBehaviour
         userInputField.text = "";
 
         questionUI.SetActive(true);
+
     }
     public void SubtractionQuestion()
     {
@@ -72,6 +74,7 @@ public class Question : MonoBehaviour
         userInputField.text = "";
 
         questionUI.SetActive(true);
+
     }
     public void MultiplicationQuestion()
     {
@@ -86,6 +89,7 @@ public class Question : MonoBehaviour
         userInputField.text = "";
 
         questionUI.SetActive(true);
+
     }
     public void DivisionQuestion()
     {
@@ -102,6 +106,7 @@ public class Question : MonoBehaviour
         userInputField.text = "";
 
         questionUI.SetActive(true);
+
     }
 
     void CheckAddition()
@@ -110,9 +115,27 @@ public class Question : MonoBehaviour
         {
             isCorrect = true;
             resultText.text = "Correct!";
+            
+            if (AudioController.Instance != null)
+            {
+                AudioController.Instance.PlayCorrectAnswerSound(); //play audioClip for correct answer
+            }
+            else
+            {
+                Debug.LogWarning("No AudioController Instance found.");
+            }
         }
         else
         {
+            if (AudioController.Instance != null)
+            {
+                AudioController.Instance.PlayIncorrectAnswer(); //play audioClip for incorrect answer
+            }
+            else
+            {
+                Debug.LogWarning("No AudioController Instance found.");
+            }
+
             resultText.text = "Incorrect!";
         }
 
@@ -127,9 +150,27 @@ public class Question : MonoBehaviour
         {
             isCorrect = true;
             resultText.text = "Correct!";
+
+            if (AudioController.Instance != null)
+            {
+                AudioController.Instance.PlayCorrectAnswerSound(); //play audioClip for correct answer
+            }
+            else
+            {
+                Debug.LogWarning("No AudioController Instance found.");
+            }
         }
         else
         {
+            if (AudioController.Instance != null)
+            {
+                AudioController.Instance.PlayIncorrectAnswer(); //play audioClip for incorrect answer
+            }
+            else
+            {
+                Debug.LogWarning("No AudioController Instance found.");
+            }
+
             resultText.text = "Incorrect!";
         }
 
@@ -144,9 +185,27 @@ public class Question : MonoBehaviour
         {
             isCorrect = true;
             resultText.text = "Correct!";
+
+            if (AudioController.Instance != null)
+            {
+                AudioController.Instance.PlayCorrectAnswerSound(); //play audioClip for correct answer
+            }
+            else
+            {
+                Debug.LogWarning("No AudioController Instance found.");
+            }
         }
         else
         {
+            if (AudioController.Instance != null)
+            {
+                AudioController.Instance.PlayIncorrectAnswer(); //play audioClip for incorrect answer
+            }
+            else
+            {
+                Debug.LogWarning("No AudioController Instance found.");
+            }
+
             resultText.text = "Incorrect!";
         }
 
@@ -161,9 +220,27 @@ public class Question : MonoBehaviour
         {
             isCorrect = true;
             resultText.text = "Correct!";
+
+            if (AudioController.Instance != null)
+            {
+                AudioController.Instance.PlayCorrectAnswerSound(); //play audioClip for correct answer
+            }
+            else
+            {
+                Debug.LogWarning("No AudioController Instance found.");
+            }
         }
         else
         {
+            if (AudioController.Instance != null)
+            {
+                AudioController.Instance.PlayIncorrectAnswer(); //play audioClip for incorrect answer
+            }
+            else
+            {
+                Debug.LogWarning("No AudioController Instance found.");
+            }
+
             resultText.text = "Incorrect!";
         }
 
@@ -209,4 +286,5 @@ public class Question : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
     }
+
 }

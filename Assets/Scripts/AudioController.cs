@@ -39,7 +39,6 @@ public class AudioController : MonoBehaviour
     public AudioClip towerFireSound; //sound effect to play when a tower fires at an enemy
     public AudioClip gameOverSound; //sound effect to play when the player loses the game
     public AudioClip winGameSound; //sound effect to play when the player completes all the waves
-    public AudioClip questionMusic; //sound effect to play when the player is asked a question (upon placing a tower)
     public AudioClip countDownEffect; //sound effect to play when the player is running out of time to answer a question
     public AudioClip incorrectAnswer; //sound effect to play when a player answers a question incorrectly 
     public AudioClip correctAnswer; //sound effect to play when a player answers a question correctly 
@@ -142,13 +141,15 @@ public class AudioController : MonoBehaviour
     private IEnumerator LoopGameSceneAudio()
     {
         currentClipIndex = 0; 
+
         while (true)
         {
             audioSource.clip = gameSceneAudioClips[currentClipIndex];
             audioSource.Play();
-            yield return new WaitForSeconds(audioSource.clip.length); //wait for clip to finish
-            currentClipIndex = (currentClipIndex +1) % gameSceneAudioClips.Length; //move to next clip, loop back if at the end
+            yield return new WaitForSeconds(audioSource.clip.length);
+            currentClipIndex = (currentClipIndex +1) % gameSceneAudioClips.Length;
         }
+
     }
 
     public void PlaySoundEffect(AudioClip clip)
@@ -200,11 +201,6 @@ public class AudioController : MonoBehaviour
         PlaySoundEffect(incorrectAnswer);
     }
 
-    public void PlayQuestionMusic()
-    {
-        PlaySoundEffect(questionMusic);
-    }
-
     public void PlayCountDownEffect()
     {
         PlaySoundEffect(countDownEffect);
@@ -226,7 +222,6 @@ public class AudioController : MonoBehaviour
         {
             audioSource.Pause();
         }
-    }
-
+    }  
 
 }
