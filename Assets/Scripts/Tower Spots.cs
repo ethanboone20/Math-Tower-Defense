@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class TowerSpots : MonoBehaviour
 {
+    public static TowerSpots instance;
 
     public Color hoverColor;
     public Color notEnoughMoneyColor;
@@ -16,7 +18,19 @@ public class TowerSpots : MonoBehaviour
     private Renderer rend;
     private Color startColor;
 
+    public TMP_InputField userInputField;
+
     BuildManager buildManager;
+    Question question;
+
+    void Awake()
+    {
+        if (instance != null)
+        {
+            return;
+        }
+        instance = this;
+    }
 
     void Start()
     {
@@ -24,6 +38,7 @@ public class TowerSpots : MonoBehaviour
         startColor = rend.material.color;
 
         buildManager = BuildManager.instance;
+        question = Question.instance;
     }
 
     public Vector3 GetBuildPosition()
@@ -49,8 +64,32 @@ public class TowerSpots : MonoBehaviour
             return;
         }
 
-        buildManager.BuildTowerOn(this);
-
+        question.currentTowerSpot = this;
+        
+        if (PlayerStats.money > buildManager.towerToBuild.cost)
+        {
+            if (question.questionType == "Addition")
+            {
+                question.AdditionQuestion();
+            }
+            if (question.questionType == "Subtraction")
+            {
+                    question.SubtractionQuestion();
+            }
+            if (question.questionType == "Multiplication")
+            {
+                question.MultiplicationQuestion();
+                }
+            if (question.questionType == "Division")
+            {
+                question.DivisionQuestion();
+            }
+        }
+        else
+        {
+            Debug.Log("Not enough money to build that!");
+        }
+        
     }
 
     void OnMouseEnter()
@@ -78,5 +117,10 @@ public class TowerSpots : MonoBehaviour
     void OnMouseExit()
     {
         rend.material.color = startColor;
+    }
+
+    public void BuildTower()
+    {
+        buildManager.BuildTowerOn(this);
     }
 }

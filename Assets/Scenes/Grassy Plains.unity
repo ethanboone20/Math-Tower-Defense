@@ -283,7 +283,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-68758
+  m_Name: pb_Mesh-1258
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -562,7 +562,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-68738
+  m_Name: pb_Mesh-1244
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -1197,7 +1197,7 @@ RectTransform:
   m_GameObject: {fileID: 389766434}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.6, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 727327800}
@@ -1847,7 +1847,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-68854
+  m_Name: pb_Mesh-1374
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -3717,6 +3717,7 @@ GameObject:
   - component: {fileID: 832714104}
   - component: {fileID: 832714105}
   - component: {fileID: 832714107}
+  - component: {fileID: 832714108}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -3756,6 +3757,9 @@ MonoBehaviour:
   multiplicationTowerPrefab: {fileID: 7875025372976537852, guid: fe6c18347b0cbf546954e3e814ad3006, type: 3}
   divisionTowerPrefab: {fileID: 1837573704425583102, guid: bcaa27d66d8231744bdfa190c3ae8536, type: 3}
   buildEffect: {fileID: 9065790531890948816, guid: 19b5a1dcbecc9bd4c955e0f60400575c, type: 3}
+  towerToBuild:
+    prefab: {fileID: 0}
+    cost: 0
 --- !u!114 &832714104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3821,6 +3825,25 @@ MonoBehaviour:
   - {fileID: 7586918630047780299, guid: 49f6b107f53345545aadb64bf36b9872, type: 3}
   - {fileID: 7113833535049046191, guid: 9d4e7b0f2666d8f4baf7e5624e7d969a, type: 3}
   - {fileID: 7021902291879695130, guid: 28c8cc86d4f908b4c834617e985111dc, type: 3}
+--- !u!114 &832714108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832714100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a0cc3db7902dd54e9ebd1fe09afa276, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questionUI: {fileID: 727327796}
+  numberText: {fileID: 1999964066}
+  userInputField: {fileID: 648189459}
+  resultText: {fileID: 999749553}
+  questionType: 
+  isCorrect: 0
+  currentTowerSpot: {fileID: 0}
 --- !u!4 &841936022 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4316840324759897341, guid: 6fcc7573037d6f1418aeeb78d8e42701, type: 3}
@@ -4479,8 +4502,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4664,7 +4687,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-68882
+  m_Name: pb_Mesh-1442
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -5559,7 +5582,7 @@ PrefabInstance:
       objectReference: {fileID: 1416242249}
     - target: {fileID: 3341621725893518923, guid: 6fcc7573037d6f1418aeeb78d8e42701, type: 3}
       propertyPath: m_VersionIndex
-      value: 57
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 3816262900142416033, guid: 6fcc7573037d6f1418aeeb78d8e42701, type: 3}
       propertyPath: m_Mesh
@@ -5707,7 +5730,7 @@ PrefabInstance:
       objectReference: {fileID: 1058924976}
     - target: {fileID: 3341621725893518923, guid: 6fcc7573037d6f1418aeeb78d8e42701, type: 3}
       propertyPath: m_VersionIndex
-      value: 51
+      value: 54
       objectReference: {fileID: 0}
     - target: {fileID: 3816262900142416033, guid: 6fcc7573037d6f1418aeeb78d8e42701, type: 3}
       propertyPath: m_Mesh
@@ -6340,7 +6363,7 @@ PrefabInstance:
       objectReference: {fileID: 1750388634}
     - target: {fileID: 3341621725893518923, guid: 6fcc7573037d6f1418aeeb78d8e42701, type: 3}
       propertyPath: m_VersionIndex
-      value: 54
+      value: 57
       objectReference: {fileID: 0}
     - target: {fileID: 3816262900142416033, guid: 6fcc7573037d6f1418aeeb78d8e42701, type: 3}
       propertyPath: m_Mesh
@@ -6405,7 +6428,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-68868
+  m_Name: pb_Mesh-1456
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -8042,7 +8065,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-68806
+  m_Name: pb_Mesh-1394
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -8227,7 +8250,7 @@ PrefabInstance:
       objectReference: {fileID: 583673024}
     - target: {fileID: 3341621725893518923, guid: 6fcc7573037d6f1418aeeb78d8e42701, type: 3}
       propertyPath: m_VersionIndex
-      value: 54
+      value: 57
       objectReference: {fileID: 0}
     - target: {fileID: 3816262900142416033, guid: 6fcc7573037d6f1418aeeb78d8e42701, type: 3}
       propertyPath: m_Mesh
@@ -8369,20 +8392,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: RandomNumberAddition, Assembly-CSharp
-        m_MethodName: SubmitButtonClicked
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: RandomNumberSubtraction, Assembly-CSharp
+      - m_Target: {fileID: 832714108}
+        m_TargetAssemblyTypeName: Question, Assembly-CSharp
         m_MethodName: SubmitButtonClicked
         m_Mode: 1
         m_Arguments:
@@ -8749,8 +8760,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -11507,7 +11518,7 @@ PrefabInstance:
       objectReference: {fileID: 43930910}
     - target: {fileID: 3341621725893518923, guid: 6fcc7573037d6f1418aeeb78d8e42701, type: 3}
       propertyPath: m_VersionIndex
-      value: 51
+      value: 54
       objectReference: {fileID: 0}
     - target: {fileID: 3816262900142416033, guid: 6fcc7573037d6f1418aeeb78d8e42701, type: 3}
       propertyPath: m_Mesh
@@ -11580,7 +11591,7 @@ PrefabInstance:
       objectReference: {fileID: 232404798}
     - target: {fileID: 3341621725893518923, guid: 6fcc7573037d6f1418aeeb78d8e42701, type: 3}
       propertyPath: m_VersionIndex
-      value: 57
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 3816262900142416033, guid: 6fcc7573037d6f1418aeeb78d8e42701, type: 3}
       propertyPath: m_Mesh

@@ -24,7 +24,7 @@ public class BuildManager : MonoBehaviour
 
     public GameObject buildEffect;
 
-    private TowerBlueprint towerToBuild;
+    public TowerBlueprint towerToBuild;
 
     public bool CanBuild { get { return towerToBuild != null; } }
     public bool HasMoney { get { return PlayerStats.money >= towerToBuild.cost; } }

@@ -11,10 +11,12 @@ public class Shop : MonoBehaviour
     public TowerBlueprint divisionTower;
 
     BuildManager buildManager;
+    Question question;
 
     void Start()
     {
         buildManager = BuildManager.instance;
+        question = Question.instance;
     }
     
     public void SelectAdditionTower()
@@ -30,6 +32,7 @@ public class Shop : MonoBehaviour
 
         Debug.Log("Addition Tower Selected!");
         buildManager.SelectTowerToBuild(additionTower);
+        question.questionType = "Addition";
     }
 
     public void SelectSubtractionTower()
@@ -45,6 +48,7 @@ public class Shop : MonoBehaviour
 
         Debug.Log("Subtraction Tower Selected!");
         buildManager.SelectTowerToBuild(subtractionTower);
+        question.questionType = "Subtraction";
     }
 
     public void SelectMultiplicationTower()
@@ -60,6 +64,7 @@ public class Shop : MonoBehaviour
 
         Debug.Log("Multiplication Tower Selected!");
         buildManager.SelectTowerToBuild(multiplicationTower);
+        question.questionType = "Multiplication";
     }
 
     public void SelectDivisionTower()
@@ -75,6 +80,7 @@ public class Shop : MonoBehaviour
 
         Debug.Log("Division Tower Selected!");
         buildManager.SelectTowerToBuild(divisionTower);
+        question.questionType = "Division";
     }
 
 }
