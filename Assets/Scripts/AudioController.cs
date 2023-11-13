@@ -161,62 +161,64 @@ public class AudioController : MonoBehaviour
         }
     }
 
-    public void PlayButtonPressSound()
+    public void PlayButtonPressSound() //sound effect to play when a button is clicked
     {
-        PlaySoundEffect(buttonPressSound);
+        PlaySoundEffect(buttonPressSound); 
     }
 
-    public void PlayEnemyDamageSound()
+    public void PlayEnemyDamageSound() //sound effect to play when an enemy takes damage
     {
         PlaySoundEffect(enemyDamageSound);
     }
 
-    public void PlayEnemyDefeatSound()
+    public void PlayEnemyDefeatSound() //sound effect to play when an enemy is defeated
     {
         PlaySoundEffect(enemyDefeatSound);
     }
 
-    public void PlayPlaceTowerSound()
+    public void PlayPlaceTowerSound() //sound effect to play when a tower is placed
     {
         PlaySoundEffect(placeTowerSound);
     }
 
-    public void PlayTowerFireSound()
+    public void PlayTowerFireSound() //sound effect to play when a tower shoots
     {
         PlaySoundEffect(towerFireSound);
     }
 
-    public void PlayGameOverSound()
+    public void PlayGameOverSound() //sound effect to play when a player loses the game
     {
         PlaySoundEffect(gameOverSound);
     }
 
-    public void PlayCorrectAnswerSound()
+    public void PlayCorrectAnswerSound() //sound effect to play when a player answers a question correctly 
     {
         PlaySoundEffect(correctAnswer);
     }
-
-    public void PlayIncorrectAnswer()
+     
+    public void PlayIncorrectAnswer() //sound effect to play when a player answers a question incorrectly
     {
         PlaySoundEffect(incorrectAnswer);
     }
 
-    public void PlayCountDownEffect()
+    /**
+    public void PlayCountDownEffect() //sound effect to play when a player is running out of time to answer a question
     {
         PlaySoundEffect(countDownEffect);
     }
+    **/
 
-    public void PlayReachedEOPSound()
+    public void PlayReachedEOPSound() //sound effect to play when the player loses a life (enemy unit reached end of path)
     {
         PlaySoundEffect(reachedEOP);
     }
 
-    public void PlayWinGameSound()
+    public void PlayWinGameSound() //sound effect to play when the player wins the game (all waves cleared)
     {
         PlaySoundEffect(winGameSound);
     }
     
-    public void PauseGameSceneAudio()
+    public void PauseGameSceneAudio() //method to pause the audio 
     {
         if (audioSource != null && audioSource.isPlaying)
         {
