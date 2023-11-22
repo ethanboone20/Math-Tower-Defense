@@ -13,7 +13,7 @@ public class Tower : MonoBehaviour
     public float range = 10f;
     public float fireRate = 1f;
     private float fireCountdown = 0;
-    public float slowAmount = 1f;
+    public float slowAmount = 0f;
 
     [Header("Unity Setup Fields")]
 
