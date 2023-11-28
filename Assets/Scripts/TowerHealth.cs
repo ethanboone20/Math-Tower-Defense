@@ -4,6 +4,18 @@ using UnityEngine;
 
 public class TowerHealth : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public int health = 100;
+
+    public void TakeDamage(GameObject[] Towers)
+    {
+        health -= 50;
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
     
+    
+
 }

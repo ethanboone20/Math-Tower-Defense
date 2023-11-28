@@ -24,6 +24,9 @@ public class WaveSpawner : MonoBehaviour
 
     public GameManager gameManager;
 
+    public TowerHealth towerHealth; 
+    public GameObject[] Towers; 
+
     void Start()
     {
         gameManager = GetComponent<GameManager>();
@@ -42,12 +45,17 @@ public class WaveSpawner : MonoBehaviour
         countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
 
         waveCountdown.text = string.Format("Wave Countdown: {0:00.00}", countdown);
+
+        Towers = GameObject.FindObjectsOfType<TowerHealth>();
     }
 
     IEnumerator SpawnWave()
     {
         waveNumber++;
         PlayerStats.waves++;
+
+        towerHealth.TakeDamage(Towers);
+
 
         if (waveNumber == 2)
         {
