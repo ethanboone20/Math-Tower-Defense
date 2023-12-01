@@ -8,14 +8,17 @@ public class TowerHealth : MonoBehaviour
 
     public void TakeDamage(GameObject[] Towers)
     {
-        health -= 50;
-
-        if (health <= 0)
+        foreach (GameObject Tower in Towers)
         {
-            Destroy(gameObject);
+            health -= 50;
+
+            if (health <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
+
+
     }
-    
-    
 
 }
