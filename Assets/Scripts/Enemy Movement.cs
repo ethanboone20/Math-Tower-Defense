@@ -38,7 +38,6 @@ public class EnemyMovement : MonoBehaviour
     public void TakeDamage(int amount)
     {
         health -= amount;
-        Slow(tower.slowAmount);
 
         if (health <= 0)
         {
@@ -46,6 +45,8 @@ public class EnemyMovement : MonoBehaviour
         }
         else
         {
+            Slow(tower.slowAmount);
+
             if (AudioController.Instance != null)
             {
                 AudioController.Instance.PlayEnemyDamageSound();
