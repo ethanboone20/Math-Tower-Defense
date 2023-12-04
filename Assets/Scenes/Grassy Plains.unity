@@ -4718,7 +4718,7 @@ MonoBehaviour:
   enemy4Prefab: {fileID: 7634368021488484885, guid: 9d4e7b0f2666d8f4baf7e5624e7d969a, type: 3}
   enemy5Prefab: {fileID: 7654182314004302240, guid: 28c8cc86d4f908b4c834617e985111dc, type: 3}
   spawnPoint: {fileID: 950152799}
-  timeBetweenWaves: 5
+  timeBetweenWaves: 20
   waveCountdown: {fileID: 621144073}
   gameManager: {fileID: 0}
 --- !u!114 &832714107
@@ -5715,7 +5715,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 7927d70770196324188f561a3f6443cc, type: 2}
     - target: {fileID: 8183383086030087811, guid: 87872d03bf4084c4997f50d21f79cd4c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.8
+      value: -14.12
       objectReference: {fileID: 0}
     - target: {fileID: 8183383086030087811, guid: 87872d03bf4084c4997f50d21f79cd4c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5723,7 +5723,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8183383086030087811, guid: 87872d03bf4084c4997f50d21f79cd4c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.0999994
+      value: -8.38
       objectReference: {fileID: 0}
     - target: {fileID: 8183383086030087811, guid: 87872d03bf4084c4997f50d21f79cd4c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6505,7 +6505,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25380
+  m_Name: pb_Mesh49628
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
