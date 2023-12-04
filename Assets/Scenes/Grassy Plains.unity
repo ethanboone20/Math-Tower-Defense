@@ -394,7 +394,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3500
+  m_Name: pb_Mesh-1372
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -727,7 +727,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2610
+  m_Name: pb_Mesh-2320
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -2501,7 +2501,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2388
+  m_Name: pb_Mesh-1478
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -2865,7 +2865,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -84}
+  m_AnchoredPosition: {x: 0, y: -83.7}
   m_SizeDelta: {x: 200, y: 195}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &598042084
@@ -2901,12 +2901,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "1) Earn points by defeating enemies. \n2) Save up for better towers, or
+  m_Text: "1) Earn points by defeating enemies.\n2) Save up for better towers, or
     spend points on more addition towers. \n3) Towers can only be placed in an empty
-    tower spot. \n4) When placing a new tower, you will need to solve a math problem.
-    Incorrect answers result in a loss of points and the tower is not placed. \n5)
-    Click on a tower in the bottom left, then click an empty space to place a tower.
-    \n6) Try to survive until the waves end!"
+    spot along the track.\n4) When placing a new tower, you will be asked to solve
+    a math problem. incorrect answers result in a loss of points and the tower will
+    not be placed.\n5) Click on a tower in the bottom left, then click an empty space
+    to place a tower\n6) Try to survive until the waves end!"
 --- !u!222 &598042085
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5773,7 +5773,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2846
+  m_Name: pb_Mesh-2078
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -6505,7 +6505,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25244
+  m_Name: pb_Mesh25310
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -7773,7 +7773,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25504
+  m_Name: pb_Mesh25434
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -8185,7 +8185,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2716
+  m_Name: pb_Mesh-1324
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -10141,7 +10141,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3486
+  m_Name: pb_Mesh-2242
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
