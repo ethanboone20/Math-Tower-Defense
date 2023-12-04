@@ -24,6 +24,7 @@ public class WaveSpawner : MonoBehaviour
 
     public GameManager gameManager;
 
+
     void Start()
     {
         gameManager = GetComponent<GameManager>();
@@ -42,12 +43,14 @@ public class WaveSpawner : MonoBehaviour
         countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
 
         waveCountdown.text = string.Format("Wave Countdown: {0:00.00}", countdown);
+
     }
 
     IEnumerator SpawnWave()
     {
         waveNumber++;
         PlayerStats.waves++;
+
 
         if (waveNumber == 2)
         {

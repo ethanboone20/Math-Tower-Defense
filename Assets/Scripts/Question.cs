@@ -30,6 +30,7 @@ public class Question : MonoBehaviour
     TowerSpots towerSpots;
 
 
+
     void Awake()
     {
         if (instance != null)

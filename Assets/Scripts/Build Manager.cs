@@ -7,6 +7,7 @@ public class BuildManager : MonoBehaviour
     
     public static BuildManager instance;
 
+
     void Awake()
     {
         if (instance != null)
@@ -55,6 +56,8 @@ public class BuildManager : MonoBehaviour
         Destroy(effect, 5f);
 
         Debug.Log("Tower built! Money left: " + PlayerStats.money);
+
+        
     }
 
     public void SelectTowerToBuild(TowerBlueprint tower)
