@@ -117,12 +117,14 @@ MonoBehaviour:
   - {fileID: 7021902291879695130, guid: 28c8cc86d4f908b4c834617e985111dc, type: 3}
   pathCreator: {fileID: 8525617472168937324, guid: 4b8b628f4f50fcd4fa90f04d0cfd3ef8, type: 3}
   enemyNum: 4
+  startSpeed: 5
   speed: 5
   health: 100
-  value: 50
+  value: 25
   deathEffect: {fileID: 2630975798147191857, guid: ad0ee37a6aa2f9a4fb6483e2d079e690, type: 3}
   distanceTravelled: 0
   newSpawnPosition: {x: 0, y: 0, z: 0}
+  newEnemy: {fileID: 0}
 --- !u!135 &586057250596178845
 SphereCollider:
   m_ObjectHideFlags: 0

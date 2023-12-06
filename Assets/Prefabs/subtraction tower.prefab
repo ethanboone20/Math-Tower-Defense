@@ -99,10 +99,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 10
   fireRate: 1.5
-  slowAmount: 0.2
   enemyTag: Enemy
-  bulletPrefab: {fileID: 3281028638264485018, guid: 9f3c8ed92f05ebf43a40a1288d989478, type: 3}
+  bulletPrefab: {fileID: 3281028638264485018, guid: 4584cb76380535d43b846b0ea7b568cc, type: 3}
   firePoint: {fileID: 4953370159045450426}
+  wavesLeft: 3
 --- !u!1 &7575360698551439335
 GameObject:
   m_ObjectHideFlags: 0

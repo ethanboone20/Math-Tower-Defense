@@ -23,11 +23,13 @@ public class WaveSpawner : MonoBehaviour
     private int waveNumber = 1;
 
     public GameManager gameManager;
-
+    BuildManager buildManager;
 
     void Start()
     {
         gameManager = GetComponent<GameManager>();
+
+        buildManager = BuildManager.instance;
     }
 
     void Update()
@@ -51,6 +53,28 @@ public class WaveSpawner : MonoBehaviour
         waveNumber++;
         PlayerStats.waves++;
 
+        for (int i = 0; i < buildManager.builtTowers.Length; i++)
+        {
+            if (buildManager.builtTowers[i] != null)
+            {
+                buildManager.builtTowers[i].GetComponent<Tower>().wavesLeft = buildManager.builtTowers[i].GetComponent<Tower>().wavesLeft - 1;
+            }
+            else
+            {
+                continue;
+            }
+        }
+        
+        for (int i = 0; i < 6; i++)
+        {
+            if (buildManager.builtTowers[i] != null)
+            {
+                if (buildManager.builtTowers[i].GetComponent<Tower>().wavesLeft <= 0)
+                {
+                    Destroy(buildManager.builtTowers[i]);
+                }
+            }
+        }
 
         if (waveNumber == 2)
         {

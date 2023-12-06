@@ -27,6 +27,8 @@ public class BuildManager : MonoBehaviour
 
     public TowerBlueprint towerToBuild;
 
+    public GameObject[] builtTowers = new GameObject[6];
+
     public bool CanBuild { get { return towerToBuild != null; } }
     public bool HasMoney { get { return PlayerStats.money >= towerToBuild.cost; } }
 
@@ -52,12 +54,44 @@ public class BuildManager : MonoBehaviour
         GameObject tower = (GameObject)Instantiate(towerToBuild.prefab, towerSpot.GetBuildPosition(), Quaternion.identity);
         towerSpot.tower = tower;
 
+        for (int i = 0; i < 6; i++)
+        {
+            if (builtTowers[0] == null)
+            {
+                builtTowers[0] = tower;
+                break;
+            }
+            else if (builtTowers[1] == null)
+            {
+                builtTowers[1] = tower;
+                break;
+            }
+            else if (builtTowers[2] == null)
+            {
+                builtTowers[2] = tower;
+                break;
+            }
+            else if (builtTowers[3] == null)
+            {
+                builtTowers[3] = tower;
+                break;
+            }
+            else if (builtTowers[4] == null)
+            {
+                builtTowers[4] = tower;
+                break;
+            }
+            else if (builtTowers[5] == null)
+            {
+                builtTowers[5] = tower;
+                break;
+            }
+        }
+
         GameObject effect = (GameObject)Instantiate(buildEffect, towerSpot.GetBuildPosition(), Quaternion.identity);
         Destroy(effect, 5f);
 
         Debug.Log("Tower built! Money left: " + PlayerStats.money);
-
-        
     }
 
     public void SelectTowerToBuild(TowerBlueprint tower)

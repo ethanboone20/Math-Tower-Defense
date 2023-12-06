@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour
     public float speed = 70f;
     public int damage = 50;
     public float explosionRadius = 0f;
+    public float slowAmount = 0f;
     public GameObject impactEffect;
 
     public void Seek(Transform _target)
@@ -56,6 +57,16 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject);
     }
 
+    void Slow(Transform enemy, float slowAmount)
+    {
+        EnemyMovement enemyMovement = enemy.GetComponent<EnemyMovement>();
+
+        if (enemyMovement != null)
+        {
+            enemyMovement.speed = enemyMovement.startSpeed * (1f - slowAmount);
+        }
+    }
+
     void Explode()
     {
         Collider[] hitTargets = Physics.OverlapSphere(transform.position, explosionRadius);
@@ -75,6 +86,7 @@ public class Bullet : MonoBehaviour
         if (enemyMovement != null)
         {
             enemyMovement.TakeDamage(damage);
+            Slow(enemy, slowAmount);
         }
     }
 

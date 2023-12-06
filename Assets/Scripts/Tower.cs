@@ -13,7 +13,6 @@ public class Tower : MonoBehaviour
     public float range = 10f;
     public float fireRate = 1f;
     private float fireCountdown = 0;
-    public float slowAmount = 0f;
 
     [Header("Unity Setup Fields")]
 
@@ -21,6 +20,8 @@ public class Tower : MonoBehaviour
 
     public GameObject bulletPrefab;
     public Transform firePoint;
+
+    public int wavesLeft = 3;
     
     void Awake()
     {

@@ -46,6 +46,11 @@ public class TowerSpots : MonoBehaviour
         return transform.position + positionOffset;
     }
 
+    public Vector3 GetDestroyPosition()
+    {
+        return transform.position;
+    }
+
     void OnMouseDown()
     {
         if (EventSystem.current.IsPointerOverGameObject())
@@ -74,12 +79,12 @@ public class TowerSpots : MonoBehaviour
             }
             if (question.questionType == "Subtraction")
             {
-                    question.SubtractionQuestion();
+                question.SubtractionQuestion();
             }
             if (question.questionType == "Multiplication")
             {
                 question.MultiplicationQuestion();
-                }
+            }
             if (question.questionType == "Division")
             {
                 question.DivisionQuestion();
@@ -123,4 +128,5 @@ public class TowerSpots : MonoBehaviour
     {
         buildManager.BuildTowerOn(this);
     }
+
 }

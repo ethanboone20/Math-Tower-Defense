@@ -45,8 +45,6 @@ public class EnemyMovement : MonoBehaviour
         }
         else
         {
-            Slow(tower.slowAmount);
-
             if (AudioController.Instance != null)
             {
                 AudioController.Instance.PlayEnemyDamageSound();
@@ -56,11 +54,6 @@ public class EnemyMovement : MonoBehaviour
                 Debug.LogWarning("No AudioController Instance found!");
             }
         }
-    }
-
-    public void Slow(float slowAmount)
-    {
-        speed = startSpeed * (1f - slowAmount);
     }
 
     void Die()

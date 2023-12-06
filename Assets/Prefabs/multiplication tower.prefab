@@ -134,3 +134,4 @@ MonoBehaviour:
   enemyTag: Enemy
   bulletPrefab: {fileID: 3281028638264485018, guid: 012c3bfc8ae0b3949b87fddefa86a501, type: 3}
   firePoint: {fileID: 136524106000996888}
+  wavesLeft: 3

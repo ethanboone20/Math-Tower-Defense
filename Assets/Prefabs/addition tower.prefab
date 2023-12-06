@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8915717141457495998}
   - component: {fileID: 1148569584756623282}
   - component: {fileID: 2289581957186714745}
-  - component: {fileID: 7955075926344244486}
   m_Layer: 0
   m_Name: addition tower
   m_TagString: Tower
@@ -104,19 +103,7 @@ MonoBehaviour:
   enemyTag: Enemy
   bulletPrefab: {fileID: 3281028638264485018, guid: 9f3c8ed92f05ebf43a40a1288d989478, type: 3}
   firePoint: {fileID: 6394485172720853766}
---- !u!114 &7955075926344244486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6302905990470596060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bebdd792ebbca945a1403f1d825f644, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 40
+  wavesLeft: 3
 --- !u!1 &8440088627483440731
 GameObject:
   m_ObjectHideFlags: 0
