@@ -128,6 +128,8 @@ public class Question : MonoBehaviour
         }
         else
         {
+            isCorrect = false;
+
             if (AudioController.Instance != null)
             {
                 AudioController.Instance.PlayIncorrectAnswer(); //play audioClip for incorrect answer
@@ -163,6 +165,8 @@ public class Question : MonoBehaviour
         }
         else
         {
+            isCorrect = false;
+
             if (AudioController.Instance != null)
             {
                 AudioController.Instance.PlayIncorrectAnswer(); //play audioClip for incorrect answer
@@ -198,6 +202,8 @@ public class Question : MonoBehaviour
         }
         else
         {
+            isCorrect = false;
+            
             if (AudioController.Instance != null)
             {
                 AudioController.Instance.PlayIncorrectAnswer(); //play audioClip for incorrect answer
@@ -233,6 +239,8 @@ public class Question : MonoBehaviour
         }
         else
         {
+            isCorrect = false;
+
             if (AudioController.Instance != null)
             {
                 AudioController.Instance.PlayIncorrectAnswer(); //play audioClip for incorrect answer
