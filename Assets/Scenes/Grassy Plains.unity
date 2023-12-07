@@ -2858,14 +2858,14 @@ RectTransform:
   m_GameObject: {fileID: 598042082}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.2837133, y: 4.2984495, z: 5.3539724}
+  m_LocalScale: {x: 4.2837133, y: 4.1117597, z: 5.3539724}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1645439016}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -83.7}
+  m_AnchoredPosition: {x: 0, y: -53}
   m_SizeDelta: {x: 200, y: 195}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &598042084
@@ -2890,7 +2890,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 12
+    m_FontSize: 11
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -2906,7 +2906,8 @@ MonoBehaviour:
     spot along the track.\n4) When placing a new tower, you will be asked to solve
     a math problem. incorrect answers result in a loss of points and the tower will
     not be placed.\n5) Click on a tower in the bottom left, then click an empty space
-    to place a tower\n6) Try to survive until the waves end!"
+    to place a tower\n6) Be smart with your placement, as towers will despawn three
+    waves after they are placed!\n7) Try to survive until the waves end!"
 --- !u!222 &598042085
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14123,7 +14124,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 390}
+  m_AnchoredPosition: {x: 0, y: 410}
   m_SizeDelta: {x: 286.03, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2122941283
